@@ -13,8 +13,8 @@ class MyTheme{
         ),
         
         listTileTheme: ListTileThemeData(
-          iconColor:Colors.white,
-          textColor: Colors.white
+          iconColor:Colors.black,
+          textColor: Colors.black
         ),
         
         appBarTheme: AppBarTheme(
