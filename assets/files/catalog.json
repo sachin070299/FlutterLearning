@@ -1,0 +1,49 @@
+{
+    "products":[
+        {
+            "id":1,
+            "name":"iphone 12 pro",
+            "desc":"Apple iphone 12th generation",
+            "price":150000,
+            "color":"#33505a",
+            "image":"https://www.neolight.in/wp-content/uploads/2022/01/iphone-12-pro-blue.jpg"
+
+        },
+        {
+            "id":2,
+            "name":"One plus nord",
+            "desc":"One Plus Nord for the better performances",
+            "price":29999,
+            "color":"#00ac51",
+            "image":"https://m.media-amazon.com/images/I/712FAola15L._AC_UF1000,1000_QL80_.jpg"
+
+        },
+        {
+            "id":3,
+            "name":"Redmi Note 4",
+            "desc":"Xioami Mad in India for indian generations",
+            "price":25999,
+            "color":"#e0bfae",
+            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8vVRpF1qYE0ZP8iGYxCDdlci6YgIDTnsvO8acawdI8w&s"
+
+        },
+        {
+            "id":4,
+            "name":"Samsung S21 pro",
+            "desc":"Samsung Galaxy touch to the Galaxy",
+            "price":99999,
+            "color":"#544ee4",
+            "image":"https://m.media-amazon.com/images/I/917nPCOw9-L.jpg"
+
+        },
+        {
+            "id":5,
+            "name":"Realme Narzo 30",
+            "desc":"Realme me the real taste of OS",
+            "price":35999,
+            "color":"#e3e4e9",
+            "image":"https://m.media-amazon.com/images/I/41-ARDVJNrL._AC_UF1000,1000_QL80_DpWeblab_.jpg"
+
+        }        
+    ]
+}

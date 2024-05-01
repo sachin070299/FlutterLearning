@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 class MyTheme{
   static ThemeData lighttheme(BuildContext context)=>ThemeData(
         primarySwatch: Colors.blue,
-        fontFamily: GoogleFonts.lato().fontFamily,
+        fontFamily: GoogleFonts.poppins().fontFamily,
         drawerTheme: DrawerThemeData(
            backgroundColor: Colors.blueAccent,
            
@@ -34,5 +34,11 @@ class MyTheme{
       static ThemeData darktheme(BuildContext context)=>ThemeData(
         brightness: Brightness.dark
       );
+      
+      //color
+
+      static Color cream = Color(0xfff5f5f5);
+      static Color deppishblue = Color(0xff403b58);
+
 
 }
