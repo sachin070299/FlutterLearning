@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, use_super_parameters
 
+
 import 'package:firstapp/screens/home_page.dart';
 import 'package:firstapp/screens/home_page2.dart';
 import 'package:firstapp/screens/home_page3.dart';
@@ -7,7 +8,6 @@ import 'package:firstapp/screens/login_page.dart';
 import 'package:firstapp/utils/routes.dart';
 import 'package:firstapp/widgets/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
        MyRoutes.homeRoute:(context)=>HomePage(),
        MyRoutes.loginRoute:(context)=>LoginPage(),
         MyRoutes.homeRoute2:(context)=>HomePage2(),
-         MyRoutes.homeRoute3:(context)=>HomePage3(),
+         MyRoutes.homeRoute3:(context)=>HomePage3()
       }
       );
   }

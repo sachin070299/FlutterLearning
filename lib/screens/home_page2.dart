@@ -4,7 +4,6 @@ import 'dart:convert';
 
 import 'package:firstapp/models/catalouge.dart';
 import 'package:firstapp/widgets/drawer.dart';
-import 'package:firstapp/widgets/item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -28,12 +27,11 @@ class _HomePage2State extends State<HomePage2> {
     var productData = decodedData["products"];
     CatalogModel.items =
         List.from(productData).map<Item>((item) => Item.fromMap(item)).toList();
-        setState(() { });
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       appBar: AppBar(
         title: Text("My App"),
@@ -41,33 +39,35 @@ class _HomePage2State extends State<HomePage2> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: (CatalogModel.items.isNotEmpty)
-        ? GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            crossAxisSpacing: 16,
-            mainAxisSpacing: 16
-            ),
-             itemBuilder: (context,index){
-              final item = CatalogModel.items[index];
-              return Card(
-                child:Card(
-                  clipBehavior: Clip.antiAlias,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                  child: GridTile(
-                    header: Container(
-                      child: Text(item.name,style: TextStyle(color: Colors.white),),
-                      padding:const EdgeInsets.all(12),
-                      decoration: BoxDecoration(                        
-                        color: Colors.blueAccent
-                      ),),
-                    child: Image.network(item.image),
-                    footer: Text("\$${item.price}"),
-                    )
-                    )
-              );  
-        },
-        itemCount: CatalogModel.items.length,
-        ):Center(child:CircularProgressIndicator()),
+            ? GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16),
+                itemBuilder: (context, index) {
+                  final item = CatalogModel.items[index];
+                  return Card(
+                      child: Card(
+                          clipBehavior: Clip.antiAlias,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16)),
+                          child: GridTile(
+                            header: Container(
+                              padding: const EdgeInsets.all(12),
+                              decoration:
+                                  BoxDecoration(color: Colors.blueAccent),
+                              child: Text(
+                                item.name,
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                            footer: Text("\$${item.price}"),
+                            child: Image.network(item.image),
+                          )));
+                },
+                itemCount: CatalogModel.items.length,
+              )
+            : Center(child: CircularProgressIndicator()),
       ),
       drawer: MyDrawer(),
     );
